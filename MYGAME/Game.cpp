@@ -21,10 +21,10 @@ void Game::initGUI()
 		std::cout << "ERROR::GAME::Failed to load font" << "\n";
 
 	//Init point text
-	this->pointText.setPosition(700.f, 25.f);
+	this->pointText.setPosition(680.f, 25.f);
 	this->pointText.setFont(this->font);
-	this->pointText.setCharacterSize(20);
-	this->pointText.setFillColor(sf::Color::White);
+	this->pointText.setCharacterSize(25);
+	this->pointText.setFillColor(sf::Color::Black);
 	this->pointText.setString("test");
 
 	this->gameOverText.setFont(this->font);
@@ -37,7 +37,7 @@ void Game::initGUI()
 
 	//Init player GUI
 	this->playerHpBar.setSize(sf::Vector2f(300.f, 25.f));
-	this->playerHpBar.setFillColor(sf::Color::Red);
+	this->playerHpBar.setFillColor(sf::Color::Green);
 	this->playerHpBar.setPosition(sf::Vector2f(20.f, 20.f));
 
 	this->playerHpBarBack = this->playerHpBar;
