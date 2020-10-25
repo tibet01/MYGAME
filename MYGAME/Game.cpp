@@ -46,12 +46,13 @@ void Game::initGUI()
 
 void Game::initWorld()
 {
-	if (!this->worldBackgroundTex.loadFromFile("pic/background1.jpg"))
+	if (!this->worldBackgroundTex.loadFromFile("pic/background4.jpg"))
 	{
 		std::cout << "ERROR::GAME::COULD NOT LOAD BACKGROUND TEXTURE" << "\n";
 	}
 
 	this->worldBackground.setTexture(this->worldBackgroundTex);
+	this->worldBackground.scale(0.7f,0.81f);
 }
 
 void Game::initSystems()
@@ -148,8 +149,8 @@ void Game::updateInput()
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && this->player->canAttack())
 	{
 		this->bullets.push_back(new Bullet(this->textures["BULLET"],
-			this->player->getPos().x + this->player->getBounds().width * 10 / 22.f,
-			this->player->getPos().y - this->player->getBounds().height / 2.f,
+			this->player->getPos().x + this->player->getBounds().width*10 /63.f,
+			this->player->getPos().y - this->player->getBounds().height*10 / 125.f,
 			0.f, -1.f, 5.f));
 	}
 }

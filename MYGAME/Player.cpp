@@ -26,7 +26,7 @@ void Player::initSprite()
 	this->sprite.setTexture(this->texture);
 
 	//Resize the sprite
-	this->sprite.scale(0.27f, 0.27f);
+	this->sprite.scale(0.1f, 0.1f);
 }
 
 Player::Player()
