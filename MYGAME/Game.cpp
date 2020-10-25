@@ -176,14 +176,14 @@ void Game::updateWorld()
 void Game::updateCollision()
 {
 	//Left world collision
-	if (this->player->getBounds().left < 0.f)
+	if (this->player->getBounds().left < -13.f)
 	{
-		this->player->setPosition(0.f, this->player->getBounds().top);
+		this->player->setPosition(-13.f, this->player->getBounds().top);
 	}
 	//Right world collison
-	else if (this->player->getBounds().left + this->player->getBounds().width >= this->window->getSize().x)
+	else if (this->player->getBounds().left + this->player->getBounds().width >= this->window->getSize().x+80.f)
 	{
-		this->player->setPosition(this->window->getSize().x - this->player->getBounds().width, this->player->getBounds().top);
+		this->player->setPosition(this->window->getSize().x - this->player->getBounds().width+80.f, this->player->getBounds().top);
 	}
 
 	//Top world collision
