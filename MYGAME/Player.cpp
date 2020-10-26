@@ -26,6 +26,7 @@ void Player::initSprite()
 	this->sprite.setTexture(this->texture);
 
 	//Resize the sprite
+	this->sprite.setPosition(350,500);
 	this->sprite.scale(0.1f, 0.1f);
 }
 

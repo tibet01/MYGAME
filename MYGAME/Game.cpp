@@ -42,6 +42,7 @@ void Game::initGUI()
 
 	this->playerHpBarBack = this->playerHpBar;
 	this->playerHpBarBack.setFillColor(sf::Color(25, 25, 25, 200));
+
 }
 
 void Game::initWorld()
@@ -148,6 +149,7 @@ void Game::updateInput()
 
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && this->player->canAttack())
 	{
+		Beep(200, 1);
 		this->bullets.push_back(new Bullet(this->textures["BULLET"],
 			this->player->getPos().x + this->player->getBounds().width*10 /63.f,
 			this->player->getPos().y - this->player->getBounds().height*10 / 125.f,
@@ -165,7 +167,7 @@ void Game::updateGUI()
 
 	//Update player GUI
 	float hpPercent = static_cast<float>(this->player->getHp()) / this->player->getHpMax();
-	this->playerHpBar.setSize(sf::Vector2f(335.f * hpPercent, this->playerHpBar.getSize().y));
+	this->playerHpBar.setSize(sf::Vector2f(300.f * hpPercent, this->playerHpBar.getSize().y));
 }
 
 void Game::updateWorld()
